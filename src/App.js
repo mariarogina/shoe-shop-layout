@@ -78,7 +78,7 @@ class App extends React.Component {
         </div>
         <div className="slider">
             <figure>
-                <img style={{width:"450px"}} src={product.img} alt={product.name}/>
+                <img style={{width:"350px"}} src={product.img} alt={product.name}/>
             </figure>
         </div>
 
