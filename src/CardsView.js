@@ -6,8 +6,8 @@ const CardsView = (props) => {
 
     const shopCards = (cards) => {
         return cards.map((card) => {
-            return (<div className = "row" style={{margin:'0px'}}>
-                <div className="col-lg-3 col-md-9 mb-2" 
+            return (<div className = "row" style={{margin:'0px', maxWidth:"1200px"}}>
+                <div className="col-lg-3 col-md-6 mb-2" 
                 key={uuid()}>
                     {card}
                 </div>
