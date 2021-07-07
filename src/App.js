@@ -69,22 +69,22 @@ class App extends React.Component {
 
      cards = this.items.map((product) => {
       
-    return (<div key={uuid()} className="shop-card">
-        <div className="title" style={{minWidth:"340px", fontSize:"2rem", margin:'20px'}}>
+    return (<div key={uuid()} className="shop-card" style={{margin:"20px"}}>
+        <div className="title" style={{ fontSize:"2rem", margin:'0px'}}>
             {product.name}
         </div>
-        <div style={{fontSize:"2rem", margin:'20px'}} className="desc">
+        <div style={{fontSize:"2rem", margin:'0px'}} className="desc">
             {product.color}
         </div>
         <div className="slider">
             <figure>
-                <img style={{maxWidth:"350px"}} src={product.img} alt={product.name}/>
+                <img style={{maxWidth:"250px"}} src={product.img} alt={product.name}/>
             </figure>
         </div>
 
         <div className="cta">
-            <div className="price" style={{fontSize:"2rem", margin:'20px'}}>"$"{product.price}</div>
-            <button className = "btn btn-success" style = {{minWidth:"150px", borderRadius:"5px"}}>"Add to cart"</button> 
+            <div className="price" style={{fontSize:"2rem", margin:'10px'}}>"$"{product.price}</div>
+            <button className = "btn btn-success" style = {{minWidth:"100px", borderRadius:"5px"}}>"Add to cart"</button> 
         </div>
     </div>)
      });
@@ -93,12 +93,17 @@ class App extends React.Component {
 
     render() {
         return (
-            <div style={{display:"flex", justifyContent:"center"}}>
-            <div style={{margin:'0px'}}>
-                <div className="toolbar" style={{margin:"20px"}} >
-       <IconSwitch icon={this.state.icon}  onSwitch={this.onSwitch} />
+            <div style={{maxWidth:"1500px"}}>
+            <div style={{margin:'0px', }}>
+                <div className="toolbar" style={{margin:"20px", maxWidth:"1500px" }} >
+
+      <IconSwitch icon={this.state.icon}  onSwitch={this.onSwitch} style={{}}/>
                 
-       </div>{ this.state.icon === "view_list" ? <CardsView cards={this.cards} /> :  <ListView items={this.items}/> }
+       </div>
+       <div style={{display:"flex", justifyContent:"center", maxWidth:"1500px",  }}>
+       { this.state.icon === "view_list" ? <CardsView cards={this.cards} style={{flexWrap:"wrap"}} /> 
+       :  <ListView items={this.items}/> }
+         </div>
          </div>
          </div>
         )

@@ -9,19 +9,30 @@ li {
   list-style-type: none; /* Убираем маркеры */
  }
 .shop-card {
-  padding:10px;
-  margin:10px;
-  border: 1px dashed black;
-  width:400px;
-
-}
-
-.shop-item {
-
   padding:20px;
   margin:20px;
   border: 1px dashed black;
-  width:1300px;
+  width:450px;
+
+}
+
+
+.module {
+
+  width:1400px;
+  
+}
+
+.toolbar {
+
+  position:"absolute"
+}
+.shop-item {
+
+  padding:40px;
+  margin:20px;
+  border: 1px dashed black;
+  width:1400px;
 }
 .App {
   text-align: center;
@@ -60,4 +71,32 @@ li {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .shop-card {
+    padding:14px;
+    margin:13px;
+    border: 0.5px dashed black;
+    width:300px;
+  
+  }
+  
+  .shop-item {
+  
+    padding:14px;
+    margin:13x;
+    border: 0.5px dashed black;
+    width:400px;
+    display:block;
+  }
+
+  #smallrow {
+
+    flex-direction:column;
+  }
+
+
+
 }
