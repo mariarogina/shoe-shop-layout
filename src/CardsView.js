@@ -8,7 +8,7 @@ const CardsView = (props) => {
   let shopcards = cards.map((product) => {
     return (
       
-       <div className = "shop-card col-lg-3 col-md-6 mb-2"
+       <div key={uuid()} className = "shop-card col-lg-3 col-md-6 mb-2"
             style={{
               paddingLeft: "20px",
               paddingRight: "20px",

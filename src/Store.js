@@ -2,7 +2,7 @@ import React from "react";
 import IconSwitch from "./IconSwitch";
 import CardsView from "./CardsView";
 import ListView from "./ListView";
-import uuid from "react-uuid";
+
 
 import "./App.css";
 

@@ -20,7 +20,7 @@ const ListView = (props) => {
                             </div>
 
                             
-                            <div  className="col-lg-2" style = {{width:"240px", borderRadius:"5px", fontSize:"1.6rem", margin:'10px', paddingTop:'10px',  }} className="title">
+                            <div  className="col-lg-2 title" style = {{width:"240px", borderRadius:"5px", fontSize:"1.6rem", margin:'10px', paddingTop:'10px',  }}>
                                 {item.name.toUpperCase()}
                             </div>
                             <div  className="col-lg-2" style={{fontSize:"1.5rem", margin:'10px', paddingTop:'10px', }}>
