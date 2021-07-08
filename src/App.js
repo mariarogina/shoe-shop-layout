@@ -2,7 +2,7 @@ import React from 'react';
 import IconSwitch from './IconSwitch';
 import CardsView from './CardsView';
 import ListView from './ListView';
-import { uuid } from 'uuidv4';
+import uuid from 'react-uuid'
 
 import "./App.css";
 
@@ -97,7 +97,7 @@ class App extends React.Component {
             <div style={{margin:'0px', }}>
                 <div className="toolbar" style={{margin:"20px", maxWidth:"1500px" }} >
 
-      <IconSwitch icon={this.state.icon}  onSwitch={this.onSwitch} style={{}}/>
+      <IconSwitch icon={this.state.icon}  onSwitch={this.onSwitch} />
                 
        </div>
        <div style={{display:"flex", justifyContent:"center", maxWidth:"1500px",  }}>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { uuid } from 'uuidv4';
+import uuid from 'react-uuid'
+import PropTypes from 'prop-types';
 
 
 const ListView = (props) => {
@@ -41,3 +42,9 @@ const ListView = (props) => {
     );
 };
 export default ListView;
+
+ListView.propTypes = {
+    // You can declare that a prop is a specific JS primitive. By default, these
+    // are all optional.
+    
+    items: PropTypes.array}

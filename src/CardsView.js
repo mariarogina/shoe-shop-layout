@@ -1,5 +1,6 @@
 import React from 'react';
-import { uuid } from 'uuidv4';
+import uuid from 'react-uuid'
+import PropTypes from 'prop-types';
 
 const CardsView = (props) => {
     let {cards} = props;
@@ -25,3 +26,9 @@ const CardsView = (props) => {
     );
 };
 export default CardsView;
+
+CardsView.propTypes = {
+    // You can declare that a prop is a specific JS primitive. By default, these
+    // are all optional.
+    
+    cards: PropTypes.array}
