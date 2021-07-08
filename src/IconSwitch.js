@@ -13,8 +13,6 @@ export default IconSwitch;
 
 
 IconSwitch.propTypes = {
-    // You can declare that a prop is a specific JS primitive. By default, these
-    // are all optional.
     
     onSwitch: PropTypes.func,
     icon: PropTypes.string}

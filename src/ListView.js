@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 const ListView = (props) => {
     let {items} = props;
 
-    const listItems = items.map((item, i) => 
+    const ShopItems = items.map((item, i) => 
     (<li key={uuid()}>
              
-                        <div className="shop-item" style = {{margin:'20px'}}>
+                        <div className="shop-item" style = {{margin:'20px', backgroundColor:"#ede9dd"}}>
                             <div className = "container" >
                             
                             
@@ -20,15 +20,15 @@ const ListView = (props) => {
                             </div>
 
                             
-                            <div  className="col-lg-2" style = {{width:"200px", borderRadius:"5px", fontSize:"1.4rem", margin:'10px', paddingTop:'10px',  }} className="title">
-                                {item.name}
+                            <div  className="col-lg-2" style = {{width:"240px", borderRadius:"5px", fontSize:"1.6rem", margin:'10px', paddingTop:'10px',  }} className="title">
+                                {item.name.toUpperCase()}
                             </div>
                             <div  className="col-lg-2" style={{fontSize:"1.5rem", margin:'10px', paddingTop:'10px', }}>
                                 {item.color}
                             </div>
                             
-                            <div  className="col-lg-2" style={{fontSize:"1.5rem", margin:'10px', paddingTop:'10px',  }}>"$"{item.price}</div>
-                            <div className="col-lg-2" style={{margin:'10px', textAlign:"center"}}><button className ="btn btn-success " style = {{minWidth:"130px", borderRadius:"5px", marginTop:'15px', marginLeft:"14px"}}>"Add to Cart"</button>
+                            <div  className="col-lg-2" style={{fontSize:"1.5rem", margin:'10px', paddingTop:'10px',color:'red'  }}>"$"{item.price}</div>
+                            <div className="col-lg-2" style={{margin:'10px', textAlign:"center"}}><button className ="btn btn btn-outline-danger" style = {{minWidth:"130px", borderRadius:"15px", borderWidth:"3px", marginTop:'15px', marginLeft:"14px", fontWeight:"500"}}>"Add to Cart"</button>
                             </div></div>
                        </div></div>
                          
@@ -37,14 +37,12 @@ const ListView = (props) => {
       
     return (
         <ul className="list">
-            {listItems}
+            {ShopItems}
         </ul>
     );
 };
 export default ListView;
 
 ListView.propTypes = {
-    // You can declare that a prop is a specific JS primitive. By default, these
-    // are all optional.
     
     items: PropTypes.array}

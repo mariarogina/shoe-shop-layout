@@ -11,7 +11,7 @@ li {
 .shop-card {
   padding:20px;
   margin:20px;
-  border: 1px dashed black;
+  border: none;
   width:450px;
 
 }
@@ -31,7 +31,7 @@ li {
 
   padding:40px;
   margin:20px;
-  border: 1px dashed black;
+  border: none;
   width:1400px;
 }
 .App {
