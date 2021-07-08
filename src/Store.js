@@ -7,7 +7,7 @@ import uuid from "react-uuid";
 import "./App.css";
 
 class Store extends React.Component {
-  items = [
+  products = [
     {
       name: "Nike Metcon 2",
       price: "130",
@@ -60,47 +60,7 @@ class Store extends React.Component {
     this.setState({ icon });
   }
 
-  cards = this.items.map((product) => {
-    return (
-      <div key={uuid()} className="shop-card" style={{ margin: "20px" }}>
-        <div className="title" style={{ fontSize: "2rem", margin: "0px" }}>
-          {product.name.toUpperCase()}
-        </div>
-        <div style={{ fontSize: "2rem", margin: "0px" }} className="desc">
-          {product.color}
-        </div>
-
-        <img
-          style={{ maxWidth: "250px" }}
-          src={product.img}
-          alt={product.name}
-        />
-
-        <div className="row" style={{marginTop:"20px",maxWidth:"350px"}}>
-          <div
-            className="price col"
-            style={{ fontSize: "1.6rem", color: "red" }}
-          >
-            "$"{product.price}
-          </div>
-
-          <div className="col">
-            <button
-              className="btn btn btn-outline-danger"
-              style={{
-                minWidth: "100px",
-                borderRadius: "15px",
-                borderWidth: "3px",
-                fontWeight: "500",
-              }}
-            >
-              "Add to cart"
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  });
+  
 
   render() {
     return (
@@ -120,9 +80,9 @@ class Store extends React.Component {
             }}
           >
             {this.state.icon === "view_list" ? (
-              <CardsView cards={this.cards} style={{ flexWrap: "wrap" }} />
+              <CardsView cards={this.products} style={{ flexWrap: "wrap" }} />
             ) : (
-              <ListView items={this.items} />
+              <ListView items={this.products} />
             )}
           </div>
         </div>
