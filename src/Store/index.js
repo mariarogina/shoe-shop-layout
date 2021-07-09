@@ -1,10 +1,8 @@
 import React from "react";
-import IconSwitch from "./IconSwitch";
-import CardsView from "./CardsView";
-import ListView from "./ListView";
+import IconSwitch from "../IconSwitch";
+import CardsView from "../CardsView";
+import ListView from "../ListView";
 
-
-import "./App.css";
 
 class Store extends React.Component {
   products = [
