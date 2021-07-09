@@ -16,7 +16,7 @@ export default Icon;
 Icon.propTypes = {
   onSwitch: PropTypes.func,
   size: PropTypes.number,
-  name: PropTypes.string,
+  name: PropTypes.string
 };
 
 Icon.defaultProps = {

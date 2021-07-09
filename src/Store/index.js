@@ -3,7 +3,6 @@ import IconSwitch from "../IconSwitch";
 import CardsView from "../CardsView";
 import ListView from "../ListView";
 
-
 class Store extends React.Component {
   products = [
     {
@@ -41,13 +40,13 @@ class Store extends React.Component {
       price: "150",
       color: "green",
       img: "https://image.ibb.co/ifqwNv/5.jpg",
-    },
+    }
   ];
 
   constructor(props) {
     super(props);
     this.state = {
-      icon: "view_list",
+      icon: "view_list"
     };
 
     this.onSwitch = this.onSwitch.bind(this);
@@ -58,15 +57,16 @@ class Store extends React.Component {
     this.setState({ icon });
   }
 
-  
-
   render() {
     return (
       <div style={{ maxWidth: "1500px" }}>
         <div style={{ margin: "0px" }}>
           <div
             className="toolbar"
-            style={{ margin: "20px", maxWidth: "1500px" }}
+            style={{
+              margin: "20px",
+              maxWidth: "1500px",
+            }}
           >
             <IconSwitch icon={this.state.icon} onSwitch={this.onSwitch} />
           </div>
@@ -74,7 +74,7 @@ class Store extends React.Component {
             style={{
               display: "flex",
               justifyContent: "center",
-              maxWidth: "1500px",
+              maxWidth: "1500px"
             }}
           >
             {this.state.icon === "view_list" ? (
