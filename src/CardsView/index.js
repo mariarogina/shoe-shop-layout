@@ -16,14 +16,14 @@ const CardsView = (props) => {
           margin: "30px",
           maxWidth: "400px",
           backgroundColor: "#ede9dd",
-          boxShadow: "8px 3px 3px grey"
+          boxShadow: "8px 3px 3px grey",
         }}
       >
         <div
           className="title"
           style={{
             fontSize: "2rem",
-            margin: "0px"
+            margin: "0px",
           }}
         >
           {product.name.toUpperCase()}
@@ -31,7 +31,7 @@ const CardsView = (props) => {
         <div
           style={{
             fontSize: "2rem",
-            margin: "0px"
+            margin: "0px",
           }}
           className="desc"
         >
@@ -44,12 +44,18 @@ const CardsView = (props) => {
           alt={product.name}
         />
 
-        <div className="row" style={{ marginTop: "20px", maxWidth: "350px" }}>
+        <div
+          className="row"
+          style={{
+            marginTop: "20px",
+            maxWidth: "350px",
+          }}
+        >
           <div
             className="price col"
             style={{
               fontSize: "1.6rem",
-              color: "red"
+              color: "red",
             }}
           >
             "$"{product.price}
@@ -62,7 +68,7 @@ const CardsView = (props) => {
                 minWidth: "100px",
                 borderRadius: "15px",
                 borderWidth: "3px",
-                fontWeight: "500"
+                fontWeight: "500",
               }}
             >
               "Add to cart"
@@ -79,7 +85,7 @@ const CardsView = (props) => {
 export default CardsView;
 
 CardsView.propTypes = {
-  cards: PropTypes.array
+  cards: PropTypes.array,
 };
 
 CardsView.defaultProps = {
@@ -120,5 +126,5 @@ CardsView.defaultProps = {
       color: "green",
       img: "https://image.ibb.co/ifqwNv/5.jpg",
     },
-  ]
+  ],
 };
